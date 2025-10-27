@@ -1,0 +1,13 @@
+body{
+    background-color: goldenrod !important ;
+}
+
+@media (max-width: 576px) {
+    .input-group {
+        flex-direction: column;
+    }
+    .input-group .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
