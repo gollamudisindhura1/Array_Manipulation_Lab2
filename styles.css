@@ -1,13 +1,91 @@
 body{
-    background-color: goldenrod !important ;
+background-color: #e2be8c;
+
+
+}
+body.spooky-bg {
+  font-family: 'Creepster', cursive;
+  color: #ff9500;   
+}           
+/* 
+.header-img {
+  width: 120px;
+  filter: drop-shadow(0 0 8px #ff0);
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+.spooky-title {
+  margin-top: 70px;
+  font-size: 3rem;
+  text-shadow: 0 0 12px #ff0, 0 0 20px #f0f;
+  animation: pulse 2s infinite;
 }
 
+.form-control {
+  background: rgba(0,0,0,0.6) !important;
+  border: 1px solid #ff9500 !important;
+  color: #fffa !important;
+}
+.form-control::placeholder { color: #ffa !important; }
+
+.btn-success  { background: #28a745; border-color: #28a745; }
+.btn-danger   { background: #dc3545; border-color: #dc3545; }
+.btn-primary  { background: #6f42c1; border-color: #6f42c1; }
+
+.btn img { vertical-align: middle; margin-right: 4px; }
+
+#shoppingList .list-group-item {
+  background: rgba(30,0,50,0.7);
+  border: 1px solid #ff9500;
+  color: #fffa;
+  margin-bottom: 6px;
+  transition: transform .2s;
+}
+#shoppingList .list-group-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 0 12px #ff0;
+}
+
+
+.list-group-item.empty-message {
+  text-align:center;
+  color:#fffa;
+  font-style:italic;
+  background:rgba(0,0,0,0.4);
+}
+
+
+@keyframes pulse {
+  0%,100% { text-shadow: 0 0 12px #ff0, 0 0 20px #f0f; }
+  50%     { text-shadow: 0 0 20px #ff0, 0 0 30px #f0f; }
+}
+
+.ghost {
+  position: absolute;
+  width: 60px;
+  pointer-events: none;
+  animation: fly 1.5s forwards;
+}
+@keyframes fly {
+  0%   { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-150px) scale(0.5); opacity: 0; }
+}
+
+.bats {
+  position: absolute;
+  font-size: 1.5rem;
+  pointer-events: none;
+  animation: bat 1s forwards;
+}
+@keyframes bat {
+  0%   { transform: translate(0,0) rotate(0); opacity: 1; }
+  100% { transform: translate(80px,-60px) rotate(30deg); opacity: 0; }
+}
+
+/* ---------- RESPONSIVE ---------- */
 @media (max-width: 576px) {
-    .input-group {
-        flex-direction: column;
-    }
-    .input-group .btn {
-        width: 100%;
-        margin-top: 10px;
-    }
+  .input-group { flex-direction: column; }
+  .input-group .btn { width:100%; margin-top:8px; }
 }
