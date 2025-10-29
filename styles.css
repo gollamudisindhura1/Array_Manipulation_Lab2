@@ -84,7 +84,6 @@ body.spooky-bg {
   100% { transform: translate(80px,-60px) rotate(30deg); opacity: 0; }
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 576px) {
   .input-group { flex-direction: column; }
   .input-group .btn { width:100%; margin-top:8px; }

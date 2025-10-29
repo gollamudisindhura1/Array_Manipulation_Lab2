@@ -112,5 +112,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bats on any click (optional fun)
     document.body.addEventListener('click', spawnBats);
     // Render List
-    renderList();   // will show empty list on load
+    renderList();   
 });
